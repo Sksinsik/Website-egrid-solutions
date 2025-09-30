@@ -1,51 +1,165 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Website</title>
+  <title>eGrid-Solutions</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      text-align: center;
+      color: #222;
+      line-height: 1.6;
     }
+
     header {
-      background: #0050a0;
-      color: white;
-      padding: 2rem;
+      background: #fff;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #eaeaea;
     }
-    main {
-      padding: 2rem;
+
+    /* Neues SVG-Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #000;
     }
-    footer {
-      background: #eee;
-      padding: 1rem;
-      font-size: 0.9rem;
+    .logo svg {
+      height: 40px;
+      margin-right: 10px;
     }
-    a {
-      color: #0050a0;
+
+    nav a {
+      margin-left: 20px;
       text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #dff6dd, #f0fff0);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .approach {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .approach h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      color: #2c7c31;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #8ae68a;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Willkommen auf meiner Website</h1>
-    <p>Dies ist meine persönliche Seite bei IONOS</p>
+    <div class="logo">
+      <!-- SVG Logo -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="30" fill="#8ae68a"/>
+        <text x="32" y="40" font-size="28" text-anchor="middle" fill="black" font-family="Arial" font-weight="bold">e</text>
+        <path d="M15 32 Q32 10, 55 32 Q32 54, 15 32" fill="none" stroke="#2c7c31" stroke-width="4" marker-end="url(#arrow)"/>
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#2c7c31"/>
+          </marker>
+        </defs>
+      </svg>
+      Grid-Solutions
+    </div>
+    <nav>
+      <a href="#approach">Our Approach</a>
+      <a href="mailto:kontakt@egrid-solutions.de">Contact</a>
+    </nav>
   </header>
-  <main>
-    <h2>Über mich</h2>
-    <p>Hier steht ein kurzer Text über dich.</p>
 
-    <h2>Kontakt</h2>
-    <p>Schreib mir: <a href="mailto:deinname@deinedomain.de">deinname@deinedomain.de</a></p>
-  </main>
+  <section class="hero">
+    <h1>Creating strategically planned infrastructure</h1>
+    <p>Making electromobility more accessible, efficient and sustainable.</p>
+  </section>
+
+  <section class="approach" id="approach">
+    <h2>Our Approach</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Evaluation and optimization</h3>
+        <p>Active charging points are analyzed and optimized using existing data sources.</p>
+      </div>
+      <div class="card">
+        <h3>Connecting analysis</h3>
+        <p>We connect financial and spatial analysis to ensure sustainable infrastructure growth.</p>
+      </div>
+      <div class="card">
+        <h3>High-potential sites</h3>
+        <p>We determine high-potential sites using comprehensive data evaluation.</p>
+      </div>
+      <div class="card">
+        <h3>Key factors</h3>
+        <p>Identification of essential factors for high-traffic locations ensures efficiency.</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Dein Name | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    <p>&copy; 2025 eGrid-Solutions | Contact us: 
+      <a href="mailto:kontakt@egrid-solutions.de">kontakt@egrid-solutions.de</a>
+    </p>
   </footer>
 </body>
 </html>
