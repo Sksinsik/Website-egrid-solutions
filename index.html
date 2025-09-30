@@ -22,17 +22,8 @@
       border-bottom: 2px solid #eaeaea;
     }
 
-    /* Neues SVG-Logo */
-    .logo {
-      display: flex;
-      align-items: center;
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #000;
-    }
-    .logo svg {
-      height: 40px;
-      margin-right: 10px;
+    .logo img {
+      height: 50px;
     }
 
     nav a {
@@ -45,7 +36,7 @@
     .hero {
       text-align: center;
       padding: 60px 20px;
-      background: linear-gradient(135deg, #dff6dd, #f0fff0);
+      background: linear-gradient(135deg, #c8ffc8, #e8ffe8);
     }
 
     .hero h1 {
@@ -59,13 +50,13 @@
       color: #444;
     }
 
-    .approach {
+    section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
     }
 
-    .approach h2 {
+    section h2 {
       text-align: center;
       margin-bottom: 40px;
       font-size: 2rem;
@@ -74,7 +65,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       gap: 30px;
     }
 
@@ -83,13 +74,11 @@
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
+      border-top: 4px solid #32cd32;
     }
-    .card:hover {
-      transform: translateY(-5px);
-    }
+
     .card h3 {
-      color: #2c7c31;
+      color: #32cd32;
       margin-bottom: 10px;
     }
 
@@ -101,7 +90,7 @@
       margin-top: 40px;
     }
     footer a {
-      color: #8ae68a;
+      color: #32cd32;
       text-decoration: none;
       font-weight: bold;
     }
@@ -110,21 +99,12 @@
 <body>
   <header>
     <div class="logo">
-      <!-- SVG Logo -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-        <circle cx="32" cy="32" r="30" fill="#8ae68a"/>
-        <text x="32" y="40" font-size="28" text-anchor="middle" fill="black" font-family="Arial" font-weight="bold">e</text>
-        <path d="M15 32 Q32 10, 55 32 Q32 54, 15 32" fill="none" stroke="#2c7c31" stroke-width="4" marker-end="url(#arrow)"/>
-        <defs>
-          <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L9,3 z" fill="#2c7c31"/>
-          </marker>
-        </defs>
-      </svg>
-      Grid-Solutions
+      <img src="logo.png" alt="eGrid-Solutions Logo">
     </div>
     <nav>
-      <a href="#approach">Our Approach</a>
+      <a href="#problem">Problem</a>
+      <a href="#approach">Approach</a>
+      <a href="#team">Team</a>
       <a href="mailto:kontakt@egrid-solutions.de">Contact</a>
     </nav>
   </header>
@@ -134,26 +114,75 @@
     <p>Making electromobility more accessible, efficient and sustainable.</p>
   </section>
 
-  <section class="approach" id="approach">
+  <section id="problem">
+    <h2>Problem</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>End consumer</h3>
+        <p>Missing infrastructure, limited wall boxes per street, poor infrastructure negatively impacts EV purchase decisions, slow progress in sustainable mobility.</p>
+      </div>
+      <div class="card">
+        <h3>Charging point operator</h3>
+        <p>Unreliable foundation in location planning, lack of databases and insights, suboptimal choices, overlooking high-potential sites.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
     <h2>Our Approach</h2>
     <div class="grid">
       <div class="card">
+        <h3>Data-based location assessment</h3>
+        <p>Connecting financial and spatial analysis with key factors for high-traffic locations.</p>
+      </div>
+      <div class="card">
         <h3>Evaluation and optimization</h3>
-        <p>Active charging points are analyzed and optimized using existing data sources.</p>
-      </div>
-      <div class="card">
-        <h3>Connecting analysis</h3>
-        <p>We connect financial and spatial analysis to ensure sustainable infrastructure growth.</p>
-      </div>
-      <div class="card">
-        <h3>High-potential sites</h3>
-        <p>We determine high-potential sites using comprehensive data evaluation.</p>
-      </div>
-      <div class="card">
-        <h3>Key factors</h3>
-        <p>Identification of essential factors for high-traffic locations ensures efficiency.</p>
+        <p>Determining high-potential sites, optimization of active charging points using data.</p>
       </div>
     </div>
+  </section>
+
+  <section id="data">
+    <h2>Data Basis</h2>
+    <p>Charging stations with known consumption, POIs weighted by type and distance, regression model for predicted energy usage (kWh/day), influence score, new planned spots.</p>
+  </section>
+
+  <section id="process">
+    <h2>Process</h2>
+    <ul>
+      <li>Assessment of current state</li>
+      <li>Basic analysis and site selection</li>
+      <li>Coordination of next steps</li>
+      <li>Refinement of data foundation</li>
+      <li>Delivery of comprehensive analysis</li>
+      <li>Support in project organization and implementation</li>
+    </ul>
+  </section>
+
+  <section id="business">
+    <h2>Business Model</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>SaaS</h3>
+        <p>Subscription model for energy providers, counties, retail chains, and operators.</p>
+      </div>
+      <div class="card">
+        <h3>Pay-per-use</h3>
+        <p>Flexible usage-based model for energy providers, counties, retail chains, and operators.</p>
+      </div>
+      <div class="card">
+        <h3>Consulting Service</h3>
+        <p>Analytical reports and strategic advice for small businesses, organizations, and cities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Our Team</h2>
+    <p><strong>Simon Ksinsik</strong> – Co-Founder – <a href="mailto:Simon.Ksinsik@egrid-solutions.de">Mail</a></p>
+    <p><strong>Giovanni Merlo</strong> – Co-Founder – <a href="mailto:Giovanni.Merlo@egrid-solutions.de">Mail</a></p>
+    <p><strong>Valérie Schacht</strong> – Co-Founder – <a href="mailto:Valerie.Schacht@egrid-solutions.de">Mail</a></p>
+    <p><strong>Malte Schill</strong> – Co-Founder – <a href="mailto:Malte.Schill@egrid-solutions.de">Mail</a></p>
   </section>
 
   <footer>
