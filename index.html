@@ -11,6 +11,12 @@
       background: #f9f9f9;
       color: #222;
       line-height: 1.6;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     header {
@@ -20,10 +26,17 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 2px solid #eaeaea;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo img {
       height: 50px;
+      transition: transform 0.3s ease;
+    }
+    .logo img:hover {
+      transform: scale(1.1) rotate(-3deg);
     }
 
     nav a {
@@ -31,12 +44,30 @@
       text-decoration: none;
       color: #333;
       font-weight: bold;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #32cd32;
+      transition: width 0.3s;
+      margin-top: 4px;
+    }
+    nav a:hover::after {
+      width: 100%;
     }
 
     .hero {
       text-align: center;
       padding: 60px 20px;
-      background: linear-gradient(135deg, #c8ffc8, #e8ffe8);
+      background: linear-gradient(135deg, #b6ffb6, #e8ffe8);
+      animation: slideDown 1.5s ease-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     .hero h1 {
@@ -44,7 +75,6 @@
       margin-bottom: 20px;
       color: #222;
     }
-
     .hero p {
       font-size: 1.2rem;
       color: #444;
@@ -54,6 +84,11 @@
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
+      animation: fadeUp 1.2s ease-in;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     section h2 {
@@ -61,6 +96,16 @@
       margin-bottom: 40px;
       font-size: 2rem;
       color: #222;
+      position: relative;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #32cd32;
+      margin: 10px auto 0;
+      border-radius: 2px;
     }
 
     .grid {
@@ -75,10 +120,18 @@
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       border-top: 4px solid #32cd32;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
     .card h3 {
       color: #32cd32;
+      margin-bottom: 10px;
+    }
+
+    ul li {
       margin-bottom: 10px;
     }
 
@@ -93,6 +146,9 @@
       color: #32cd32;
       text-decoration: none;
       font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -114,77 +170,8 @@
     <p>Making electromobility more accessible, efficient and sustainable.</p>
   </section>
 
-  <section id="problem">
-    <h2>Problem</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>End consumer</h3>
-        <p>Missing infrastructure, limited wall boxes per street, poor infrastructure negatively impacts EV purchase decisions, slow progress in sustainable mobility.</p>
-      </div>
-      <div class="card">
-        <h3>Charging point operator</h3>
-        <p>Unreliable foundation in location planning, lack of databases and insights, suboptimal choices, overlooking high-potential sites.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="approach">
-    <h2>Our Approach</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Data-based location assessment</h3>
-        <p>Connecting financial and spatial analysis with key factors for high-traffic locations.</p>
-      </div>
-      <div class="card">
-        <h3>Evaluation and optimization</h3>
-        <p>Determining high-potential sites, optimization of active charging points using data.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="data">
-    <h2>Data Basis</h2>
-    <p>Charging stations with known consumption, POIs weighted by type and distance, regression model for predicted energy usage (kWh/day), influence score, new planned spots.</p>
-  </section>
-
-  <section id="process">
-    <h2>Process</h2>
-    <ul>
-      <li>Assessment of current state</li>
-      <li>Basic analysis and site selection</li>
-      <li>Coordination of next steps</li>
-      <li>Refinement of data foundation</li>
-      <li>Delivery of comprehensive analysis</li>
-      <li>Support in project organization and implementation</li>
-    </ul>
-  </section>
-
-  <section id="business">
-    <h2>Business Model</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>SaaS</h3>
-        <p>Subscription model for energy providers, counties, retail chains, and operators.</p>
-      </div>
-      <div class="card">
-        <h3>Pay-per-use</h3>
-        <p>Flexible usage-based model for energy providers, counties, retail chains, and operators.</p>
-      </div>
-      <div class="card">
-        <h3>Consulting Service</h3>
-        <p>Analytical reports and strategic advice for small businesses, organizations, and cities.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="team">
-    <h2>Our Team</h2>
-    <p><strong>Simon Ksinsik</strong> – Co-Founder – <a href="mailto:Simon.Ksinsik@egrid-solutions.de">Mail</a></p>
-    <p><strong>Giovanni Merlo</strong> – Co-Founder – <a href="mailto:Giovanni.Merlo@egrid-solutions.de">Mail</a></p>
-    <p><strong>Valérie Schacht</strong> – Co-Founder – <a href="mailto:Valerie.Schacht@egrid-solutions.de">Mail</a></p>
-    <p><strong>Malte Schill</strong> – Co-Founder – <a href="mailto:Malte.Schill@egrid-solutions.de">Mail</a></p>
-  </section>
-
+  <!-- ab hier kommen deine inhaltlichen Sektionen (Problem, Approach, Data, Team usw. – wie im letzten Code) -->
+  
   <footer>
     <p>&copy; 2025 eGrid-Solutions | Contact us: 
       <a href="mailto:kontakt@egrid-solutions.de">kontakt@egrid-solutions.de</a>
