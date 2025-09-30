@@ -30,9 +30,8 @@
       top: 0;
       z-index: 1000;
     }
-
     .logo img {
-      height: 50px;
+      height: 100px;   /* vorher 50px */
       transition: transform 0.3s ease;
     }
     .logo img:hover {
@@ -160,8 +159,9 @@
     <nav>
       <a href="#problem">Problem</a>
       <a href="#approach">Approach</a>
-      <a href="#team">Team</a>
-      <a href="mailto:kontakt@egrid-solutions.de">Contact</a>
+      <a href="#data">Data</a>
+      <a href="#process">Process</a>
+      <a href="#business">Business Model</a>
     </nav>
   </header>
 
@@ -170,8 +170,79 @@
     <p>Making electromobility more accessible, efficient and sustainable.</p>
   </section>
 
-  <!-- ab hier kommen deine inhaltlichen Sektionen (Problem, Approach, Data, Team usw. – wie im letzten Code) -->
-  
+  <section id="problem">
+    <h2>Problem</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>End Consumer</h3>
+        <p>Missing infrastructure, limited wall boxes per street, poor infrastructure negatively impacts EV purchase decisions, slow progress in sustainable mobility.</p>
+      </div>
+      <div class="card">
+        <h3>Charging Point Operator</h3>
+        <p>Unreliable foundation in location planning, lack of databases and actionable insights, suboptimal location choices, overlooking high-potential sites.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <h2>Our Approach</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Data-based location assessment</h3>
+        <p>Connecting financial and spatial analysis with key factors for high-traffic locations.</p>
+      </div>
+      <div class="card">
+        <h3>Evaluation and optimization</h3>
+        <p>Determining high-potential sites and optimization of active charging points using data.</p>
+      </div>
+      <div class="card">
+        <h3>Identification of key factors</h3>
+        <p>Essential factors for high-traffic locations are identified to ensure sustainable infrastructure growth.</p>
+      </div>
+      <div class="card">
+        <h3>Comprehensive data evaluation</h3>
+        <p>We combine multiple datasets to refine site selection and improve location planning accuracy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="data">
+    <h2>Data Basis</h2>
+    <div class="card">
+      <p>Charging stations with known energy consumption, POIs around charging stations, weighting by type and distance, regression model for predicted energy usage (kWh/day), influence score, and evaluation of new planned sites.</p>
+    </div>
+  </section>
+
+  <section id="process">
+    <h2>Process</h2>
+    <div class="grid">
+      <div class="card"><h3>Step 1</h3><p>Assessment of current state</p></div>
+      <div class="card"><h3>Step 2</h3><p>Basic analysis and site selection</p></div>
+      <div class="card"><h3>Step 3</h3><p>Coordination of next steps</p></div>
+      <div class="card"><h3>Step 4</h3><p>Refinement of data foundation</p></div>
+      <div class="card"><h3>Step 5</h3><p>Delivery of comprehensive analysis</p></div>
+      <div class="card"><h3>Step 6</h3><p>Support in project organization and implementation</p></div>
+    </div>
+  </section>
+
+  <section id="business">
+    <h2>Business Model</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>SaaS</h3>
+        <p>Subscription model providing access to platform and customization for energy providers, counties, retail chains, and operators.</p>
+      </div>
+      <div class="card">
+        <h3>Pay-per-Use</h3>
+        <p>Flexible usage-based model suitable for large operators and municipalities with scalable demand.</p>
+      </div>
+      <div class="card">
+        <h3>Consulting Service</h3>
+        <p>Analytical reports and strategic advice tailored for small businesses, organizations, and cities.</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 eGrid-Solutions | Contact us: 
       <a href="mailto:kontakt@egrid-solutions.de">kontakt@egrid-solutions.de</a>
@@ -179,3 +250,4 @@
   </footer>
 </body>
 </html>
+
